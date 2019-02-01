@@ -42,10 +42,17 @@ const handleSubmit = function(event) {
       newCategoryItem.textContent=`Category: ${this.category.value}`; //change to dynamically accept author
       console.log("category")
 
+    //create new  p to push category to div
+      const newStatusItem = document.createElement('p');
+      newStatusItem.classList.add('status');
+      newStatusItem.textContent=`Status: ${this.status.value}`; //change to dynamically accept author
+      console.log("status")
+
 
   newBookItem.appendChild(newHeadingItem);
   newBookItem.appendChild(newAuthorItem);
   newBookItem.appendChild(newCategoryItem);
+  newBookItem.appendChild(newStatusItem);
   newBook.appendChild(newBookItem);
 }
 
